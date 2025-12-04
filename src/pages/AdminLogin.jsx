@@ -87,7 +87,7 @@ const AdminLogin = () => {
 
           <div className="demo-credentials">
             <p><strong>Demo Admin:</strong></p>
-            <p>Email: admin@purrfect.com | Password: admin123</p>
+            <p>Email: ilyas@gmail.com | Password: admin123</p>
           </div>
         </div>
       </div>

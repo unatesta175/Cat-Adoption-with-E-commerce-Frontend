@@ -4,6 +4,7 @@ import { AuthProvider, useAuth } from './context/AuthContext';
 import { CartProvider } from './context/CartContext';
 import Navbar from './components/Navbar';
 import AdminNavbar from './components/AdminNavbar';
+import AdminLayout from './components/AdminLayout';
 import Home from './pages/Home';
 import Browse from './pages/Browse';
 import CatDetails from './pages/CatDetails';
@@ -11,7 +12,11 @@ import Login from './pages/Login';
 import AdminLogin from './pages/AdminLogin';
 import Register from './pages/Register';
 import UserDashboard from './pages/UserDashboard';
-import AdminDashboard from './pages/AdminDashboard';
+import AdminDashboardHome from './pages/admin/AdminDashboardHome';
+import AdminCats from './pages/admin/AdminCats';
+import AdminProducts from './pages/admin/AdminProducts';
+import AdminOrders from './pages/admin/AdminOrders';
+import AdminAdoptions from './pages/admin/AdminAdoptions';
 import Shop from './pages/Shop';
 import Cart from './pages/Cart';
 import Checkout from './pages/Checkout';
@@ -116,11 +121,51 @@ function AppContent() {
         <Route
           path="/admin/dashboard"
           element={
-            <Layout isAdminRoute>
-              <ProtectedRoute adminOnly={true}>
-                <AdminDashboard />
-              </ProtectedRoute>
-            </Layout>
+            <ProtectedRoute adminOnly={true}>
+              <AdminLayout>
+                <AdminDashboardHome />
+              </AdminLayout>
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/admin/cats"
+          element={
+            <ProtectedRoute adminOnly={true}>
+              <AdminLayout>
+                <AdminCats />
+              </AdminLayout>
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/admin/products"
+          element={
+            <ProtectedRoute adminOnly={true}>
+              <AdminLayout>
+                <AdminProducts />
+              </AdminLayout>
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/admin/orders"
+          element={
+            <ProtectedRoute adminOnly={true}>
+              <AdminLayout>
+                <AdminOrders />
+              </AdminLayout>
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/admin/adoptions"
+          element={
+            <ProtectedRoute adminOnly={true}>
+              <AdminLayout>
+                <AdminAdoptions />
+              </AdminLayout>
+            </ProtectedRoute>
           }
         />
 

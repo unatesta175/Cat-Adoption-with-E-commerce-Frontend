@@ -104,6 +104,7 @@ const Shop = () => {
         </div>
 
         <div className="products-grid">
+         
           {products.length === 0 ? (
             <div className="no-products">
               <i className="fas fa-box-open"></i>
@@ -146,6 +147,7 @@ const Shop = () => {
               </div>
             ))
           )}
+           <br />
         </div>
       </div>
     </div>

@@ -88,6 +88,11 @@ const Login = () => {
             <p>Don't have an account? <Link to="/register">Register here</Link></p>
             <p>Are you a shelter admin? <Link to="/admin/login">Admin Login</Link></p>
           </div>
+
+          <div className="demo-credentials">
+            <p><strong>Demo User:</strong></p>
+            <p>Email: muhammadilyasamran@gmail.com | Password: password123</p>
+          </div>
         </div>
       </div>
     </div>
